@@ -19,8 +19,10 @@ namespace POO_CSharp_Exercicio_P8_E1
 
 
             Console.Write("How many employees will be registered? ");
+
             int n = int.Parse(Console.ReadLine());
             List<Employee> list = new List<Employee>();
+
             for (int i = 1; i <= n; i++)
             {
                 Console.WriteLine("Employee #" + i + ":");
@@ -33,9 +35,11 @@ namespace POO_CSharp_Exercicio_P8_E1
                 list.Add(new Employee(id, name, salary));
                 Console.WriteLine();
             }
+
             Console.Write("Enter the employee id that will have salary increase : ");
             int searchId = int.Parse(Console.ReadLine());
             Employee emp = list.Find(x => x.Id == searchId);
+
             if (emp != null)
             {
                 Console.Write("Enter the percentage: ");
@@ -46,6 +50,7 @@ namespace POO_CSharp_Exercicio_P8_E1
             {
                 Console.WriteLine("This id does not exist!");
             }
+
             Console.WriteLine();
             Console.WriteLine("Updated list of employees:");
             foreach (Employee obj in list)
